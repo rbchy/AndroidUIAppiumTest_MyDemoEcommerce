@@ -364,6 +364,12 @@ mvn clean test -DsuiteXmlFile=testng.xml
 Targets the [ApiDemos](https://github.com/appium/android-apidemos) reference app. APK should be at `apks/ApiDemos-debug.apk` (optional — falls back to the already-installed app otherwise).
 
 ---
+## 👨‍💻 Author
+
+**Ranajit B Chowdhury**
+**QA Automation Engineer & SDET
+📧 Cell Phone - 2673425565
+📧 chyranajit@gmail.com
 
 ## License
 
