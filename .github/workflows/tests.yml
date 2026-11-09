@@ -1,0 +1,80 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: TestNG suite file
+        default: testng-mydemo-all.xml
+
+permissions:
+  contents: read
+
+jobs:
+  mydemo:
+    name: MyDemoApp suite on Android emulator (API 33)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SUITE: ${{ github.event.inputs.suite || 'testng-mydemo-all.xml' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable KVM for the emulator
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Appium 3 and the UiAutomator2 driver
+        run: |
+          npm install -g appium@3
+          appium driver install uiautomator2
+
+      - name: Download Sauce Labs My Demo App (Android)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url=$(gh api repos/saucelabs/my-demo-app-android/releases/latest --jq '[.assets[] | select(.name | endswith(".apk"))][0].browser_download_url')
+          echo "APK: $url"
+          curl -sSL "$url" -o apks/MyDemoApp.apk
+          AAPT=$(ls -d "$ANDROID_HOME"/build-tools/*/ | sort -V | tail -1)aapt
+          "$AAPT" dump badging apks/MyDemoApp.apk | grep -E "^package:|launchable-activity" || true
+
+      - name: Compile tests
+        run: mvn -B --no-transfer-progress test-compile
+
+      - name: Run the suite on the emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: ./.github/scripts/run-appium-tests.sh "$SUITE" mydemo
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mydemo-reports
+          path: |
+            target/ci/
+            target/allure-results/
+            test-output/
+            page-dumps/
+          if-no-files-found: ignore

@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FullRegressionSuite" verbose="1">
+
+    <listeners>
+        <listener class-name="listeners.ScreenshotListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+
+    <test name="Install Lifecycle Tests">
+        <classes>
+            <class name="tests.InstallLifecycleTests"/>
+        </classes>
+    </test>
+
+    <test name="Combined Core + Advanced Tests">
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="platformVersion" value="17"/>
+        <classes>
+            <class name="tests.CombinedApiDemosTests"/>
+        </classes>
+    </test>
+
+    <test name="Enterprise Test Categories">
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="platformVersion" value="17"/>
+        <classes>
+            <class name="tests.EnterpriseTestSuite"/>
+        </classes>
+    </test>
+
+    <test name="Interrupt Simulation Tests">
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="platformVersion" value="17"/>
+        <classes>
+            <class name="tests.InterruptSimulationTests"/>
+        </classes>
+    </test>
+
+    <test name="API Integration Tests">
+        <classes>
+            <class name="tests.ApiIntegratedTests"/>
+        </classes>
+    </test>
+
+    <test name="E2E Journey Tests">
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="platformVersion" value="17"/>
+        <classes>
+            <class name="tests.E2EJourneyTests"/>
+        </classes>
+    </test>
+
+</suite>
