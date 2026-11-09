@@ -1,377 +1,275 @@
-# 📱 AndroidAppiumTest_MyDemoE-Commerce Automation
+<div align="center">
 
-<p>
-  <img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17" />
-  <img src="https://img.shields.io/badge/Maven-3-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven 3" />
-  <img src="https://img.shields.io/badge/Appium-3.5.2-660198?style=for-the-badge&logo=appium&logoColor=white" alt="Appium 3.5.2" />
-  <img src="https://img.shields.io/badge/Selenium-4.32.0-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenium 4.32.0" />
-  <img src="https://img.shields.io/badge/TestNG-7.10.2-E2231A?style=for-the-badge" alt="TestNG 7.10.2" />
-  <img src="https://img.shields.io/badge/Android-API%2031-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android API 31" />
-  <img src="https://img.shields.io/badge/REST%20Assured-5.4.0-25A162?style=for-the-badge" alt="REST Assured 5.4.0" />
-  <img src="https://img.shields.io/badge/ExtentReports-5.1.2-2196F3?style=for-the-badge" alt="ExtentReports 5.1.2" />
-  <img src="https://img.shields.io/badge/Allure%20Report-2.35.3-FF6E00?style=for-the-badge" alt="Allure Report 2.35.3" />
-</p>
+# 🛍️ Android E-Commerce Automation — Sauce Labs My Demo App
 
-A comprehensive **Android UI automation framework** built with **Appium 3**, **UiAutomator2**, **TestNG**, and **Java 17**.
+### 75 Appium tests across 12 categories, running on a real Android emulator in GitHub Actions
 
-![Technology Stack](docs/tech-stack-diagram.svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=18&pause=1500&color=FFC107&center=true&vCenter=true&width=900&repeat=true&lines=Appium+3+%C2%B7+UiAutomator2+%C2%B7+Java+17+%C2%B7+TestNG;Login+%E2%86%92+cart+%E2%86%92+checkout+%C2%B7+lifecycle+%C2%B7+interrupts+%C2%B7+a11y;75+%2F+75+on+an+Android+emulator+in+10+minutes)](https://git.io/typing-svg)
 
-Features two fully automated test suites:
-- **MyDemo App Suite** — 75 tests across 12 categories (⭐ primary suite)
-- **ApiDemos Suite** — core UI regression tests
+<!-- ============ STATUS BAR ============ -->
+[![Tests](https://github.com/rbchy/AndroidUIAppiumTest_MyDemoEcommerce/actions/workflows/tests.yml/badge.svg)](https://github.com/rbchy/AndroidUIAppiumTest_MyDemoEcommerce/actions/workflows/tests.yml)
+![MyDemo](https://img.shields.io/badge/MyDemo%20suite-75%20%2F%2075%20passing-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white)
+![App](https://img.shields.io/badge/My%20Demo%20App-2.3.0-E2231A?style=for-the-badge&logo=saucelabs&logoColor=white)
+![Device](https://img.shields.io/badge/Android-Emulator%20API%2033-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
-> **MyDemo suite status (2026-07-19):** rebuilt to restore full 75-test coverage
-> across all 12 categories after several test classes were found reduced to
-> minimal stubs (see Known Limitations). Verified via live run: **75/75 passing,
-> 0 failures, 0 skipped.** ✅ The "72 pass" result further below is from the
-> *earlier* fuller version of this suite and predates the rebuild.
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Appium](https://img.shields.io/badge/Appium-3%20%C2%B7%20UiAutomator2-662D91?style=for-the-badge&logo=appium&logoColor=white)
+![java-client](https://img.shields.io/badge/java--client-9.5.0-662D91?style=for-the-badge)
+![Selenium](https://img.shields.io/badge/Selenium-4.32.0-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-7.10.2-FF7F00?style=for-the-badge)
+![ExtentReports](https://img.shields.io/badge/ExtentReports-5.1.2-2196F3?style=for-the-badge)
+![Allure](https://img.shields.io/badge/Allure-2.29-FF5252?style=for-the-badge)
+
+![Last Commit](https://img.shields.io/github/last-commit/rbchy/AndroidUIAppiumTest_MyDemoEcommerce?style=flat-square&color=0d9488&label=Last%20commit)
+![Repo Size](https://img.shields.io/github/repo-size/rbchy/AndroidUIAppiumTest_MyDemoEcommerce?style=flat-square&color=155e75&label=Repo%20size)
+
+<img src="docs/tech-stack-diagram.svg" alt="Technology stack" width="80%">
+
+</div>
 
 ---
 
-## Tech Stack
+## 📌 At a Glance
 
-| Layer | Technology |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🙋 What this is**
+
+A native-Android UI automation framework for **[Sauce Labs' My Demo App](https://github.com/saucelabs/my-demo-app-android)** — a realistic e-commerce app with a catalog, product details, cart, login and a multi-step checkout. **75 tests in 12 categories** cover the shopping journey end to end, plus lifecycle, device behaviour, interrupts, performance, security and accessibility.
+
+Every push downloads the official app release, boots an **Android emulator in GitHub Actions**, starts Appium 3 and runs the full suite.
+
+> *Quality is never an accident; it is always the result of intelligent effort.*
+
+</td>
+<td width="50%" valign="top">
+
+**📍 Quick facts**
+
+| | |
 |---|---|
-| Language | Java 17 |
-| Test runner | TestNG 7.10.2 |
-| Automation | Appium 3.5.2 + UiAutomator2 |
-| Driver client | Appium Java Client 9.5.0 |
-| Selenium core | Selenium 4.32.0 |
-| REST testing | REST Assured 5.4.0 |
-| Reporting | ExtentReports 5.1.2 + Allure 2.35.3 (allure-maven 3.0.2) |
-| Build tool | Maven 3 (Surefire 3.2.5) |
+| 📦 **App** | My Demo App 2.3.0 (`com.saucelabs.mydemoapp.android`) |
+| 🤖 **Device** | Android emulator API 33 (`emulator-5554`) |
+| 🧪 **MyDemo suite** | 75 tests · 12 categories |
+| ✅ **CI** | 75 / 75 · 0 skipped · ≈ 10 min |
+| 👤 **Demo login** | `bob@example.com` / `10203040` (public) |
+| 📊 **Reports** | ExtentReports · Allure · screenshots |
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Prerequisites
+## ✅ Latest Results (GitHub Actions)
 
-1. **Java 17** — `JAVA_HOME` must be set
-2. **Maven 3** on PATH
-3. **Node.js** (needed to install Appium)
-4. **Appium 3** and UiAutomator2 driver:
-   ```bash
-   npm install -g appium
-   appium driver install uiautomator2
-   ```
-5. **Android SDK** with `adb` on PATH (installed via Android Studio, or SDK command-line tools)
-6. **Android Emulator** running at `emulator-5554` (API 31, Android 12)
-7. **APKs (optional)** — only needed for a *fresh install*; if the app is already
-   installed on the emulator, tests fall back to launching it as-is:
-   - `apks/MyDemoApp.apk` — https://github.com/saucelabs/my-demo-app-android/releases
-   - `apks/ApiDemos-debug.apk` — https://github.com/appium/android-apidemos
-   - See `apks/README.md` for details.
+| Suite | File | Tests | ✅ | ❌ | ⏭️ | Time |
+|---|---|---:|---:|---:|---:|---|
+| **MyDemoApp — all categories** | `testng-mydemo-all.xml` | 75 | 75 | 0 | 0 | 10 m 15 s |
 
----
-
-## Quick Start (macOS)
-
-```bash
-# 1. Install prerequisites (skip any you already have)
-brew install openjdk@17 maven node
-npm install -g appium
-appium driver install uiautomator2
-
-# 2. Point JAVA_HOME at JDK 17 (add to ~/.zshrc to persist)
-export JAVA_HOME=$(/usr/libexec/java_home -v17)
-
-# 3. Start an Android emulator (via Android Studio's Device Manager, or:)
-emulator -avd <your_avd_name>
-
-# 4. In a separate terminal, start Appium
-npx appium
-
-# 5. Confirm the emulator is visible
-adb devices
-# Expected: emulator-5554   device
-
-# 6. From the project root, run the tests
-cd /path/to/AndroidUIAppiumTest_MyDemoEcommerce
-mvn clean test
-# ^ runs testng-mydemo-local.xml by default (see pom.xml <suiteXmlFile> property)
-
-# Or use the helper scripts:
-./run-mydemo-local.sh   # local suite, ~9 tests
-./run-mydemo-all.sh     # full suite, 75+ tests
-```
-
-Both `.sh` scripts are executable and are the macOS/Linux equivalents of the
-original `run-mydemo-local.bat` / `run-mydemo-all.bat` (which only run on Windows).
-
----
-
-## Project Structure
-
-```
-appium-tests/
-├── src/test/java/
-│   ├── base/
-│   │   ├── MyDemoBaseTest.java         # MyDemo: Appium session setup/teardown
-│   │   └── BaseTest.java               # ApiDemos: Appium session setup/teardown
-│   │
-│   ├── pages/
-│   │   ├── mydemo/                     # MyDemo Page Object Model
-│   │   │   ├── LoginPage.java
-│   │   │   ├── ProductsPage.java
-│   │   │   ├── CartPage.java
-│   │   │   └── CheckoutPage.java
-│   │   ├── MainScreenPage.java         # ApiDemos pages
-│   │   └── TextScreenPage.java
-│   │
-│   ├── tests/
-│   │   ├── MyDemoSmokeTests.java       # [SMOKE]     6 tests
-│   │   ├── MyDemoE2ETests.java         # [E2E]       9 tests
-│   │   ├── MyDemoAppLifecycleTests.java# [LIFECYCLE] 6 tests
-│   │   ├── MyDemoNavigationTests.java  # [NAV]       7 tests
-│   │   ├── MyDemoDeviceBehaviorTests.java# [DEVICE]  5 tests
-│   │   ├── MyDemoNegativeTests.java    # [NEGATIVE]  8 tests
-│   │   ├── MyDemoPerformanceTests.java # [PERF]      5 tests
-│   │   ├── MyDemoSecurityTests.java    # [SECURITY]  5 tests
-│   │   ├── MyDemoAccessibilityTests.java# [A11Y]     6 tests
-│   │   ├── MyDemoDataDrivenTests.java  # [DATA]      9 tests
-│   │   ├── MyDemoInstallTests.java     # [INSTALL]   4 tests
-│   │   ├── MyDemoInterruptTests.java   # [INTERRUPT] 5 tests
-│   │   └── CombinedApiDemosTests.java  # ApiDemos core tests
-│   │
-│   ├── listeners/
-│   │   └── ScreenshotListener.java     # Auto-screenshot on failure
-│   └── utils/
-│       └── ExtentReportManager.java    # HTML report singleton
-│
-├── apks/                                # Local APK files (gitignored) — see apks/README.md
-├── page-dumps/                          # Page-source XML dumps written at runtime for debugging
-├── testng-mydemo-all.xml               # MyDemo full suite (75 tests)
-├── testng-mydemo-local.xml             # MyDemo local suite (default — see pom.xml)
-├── testng.xml                          # ApiDemos suite
-├── run-mydemo-local.sh / .bat          # Convenience runner: local suite (macOS/Linux / Windows)
-├── run-mydemo-all.sh / .bat            # Convenience runner: full suite (macOS/Linux / Windows)
-├── pom.xml
-└── README.md
-```
-
----
-
-## Running the MyDemo Suite
-
-### 1. Start the Appium server
-
-```bash
-npx appium
-```
-
-### 2. Verify the emulator is online
-
-```bash
-adb devices
-# Expected: emulator-5554   device
-```
-
-### 3. Run all 75 tests
-
-```bash
-mvn clean test -DsuiteXmlFile=testng-mydemo-all.xml
-# or:
-./run-mydemo-all.sh
-```
-
-### 4. View the HTML report
-
-```
-test-output/ExtentReport.html
-```
-
----
-
-## MyDemo Test Categories
+<sub>Ubuntu runner, Android API 33 emulator (pixel_6), Appium 3 + UiAutomator2, Temurin 17, My Demo App 2.3.0 downloaded from Sauce Labs' latest release. Reports, Allure results and Appium logs are uploaded as a build artifact on every run.</sub>
 
 | # | Class | Tag | Tests | What it covers |
-|---|---|---|---|---|
-| 1 | `MyDemoSmokeTests` | `[SMOKE]` | 6 | App launches, login screen loads, catalog visible |
-| 2 | `MyDemoE2ETests` | `[E2E]` | 9 | Full login → add to cart → checkout flows |
-| 3 | `MyDemoAppLifecycleTests` | `[LIFECYCLE]` | 6 | Background/foreground, kill & relaunch |
-| 4 | `MyDemoNavigationTests` | `[NAV]` | 7 | Hamburger menu, product detail, cart, checkout steps |
-| 5 | `MyDemoDeviceBehaviorTests` | `[DEVICE]` | 5 | Back button, home button, screen orientation stability |
+|---|---|---|---:|---|
+| 1 | `MyDemoSmokeTests` | `[SMOKE]` | 6 | App launches, login screen, catalog visible |
+| 2 | `MyDemoE2ETests` | `[E2E]` | 9 | Login → add to cart → checkout → order complete |
+| 3 | `MyDemoAppLifecycleTests` | `[LIFECYCLE]` | 6 | Background / foreground, kill & relaunch |
+| 4 | `MyDemoNavigationTests` | `[NAV]` | 7 | Menu, product detail, cart, checkout steps |
+| 5 | `MyDemoDeviceBehaviorTests` | `[DEVICE]` | 5 | Back and home buttons, orientation stability |
 | 6 | `MyDemoNegativeTests` | `[NEGATIVE]` | 8 | Invalid credentials, empty fields, boundary inputs |
-| 7 | `MyDemoPerformanceTests` | `[PERF]` | 5 | Page load SLA checks (login ≤5s, cart open ≤3s) |
-| 8 | `MyDemoSecurityTests` | `[SECURITY]` | 5 | SQL injection, XSS in input fields, session handling |
-| 9 | `MyDemoAccessibilityTests` | `[A11Y]` | 6 | Content descriptions, focusability, label presence |
-| 10 | `MyDemoDataDrivenTests` | `[DATA]` | 9 | Multiple credential sets, addresses, card numbers |
-| 11 | `MyDemoInstallTests` | `[INSTALL]` | 4 | Fresh install, upgrade, uninstall verification |
-| 12 | `MyDemoInterruptTests` | `[INTERRUPT]` | 5 | Incoming call, SMS, WiFi toggle during active session |
-
-**Total: 75 tests — 75 pass · 0 fail · 0 skip** ✅ (verified live)
+| 7 | `MyDemoPerformanceTests` | `[PERF]` | 5 | Load-time SLAs (login ≤ 5 s, cart ≤ 3 s) |
+| 8 | `MyDemoSecurityTests` | `[SECURITY]` | 5 | SQL injection and XSS input, session handling |
+| 9 | `MyDemoAccessibilityTests` | `[A11Y]` | 6 | Content descriptions, focusability, labels |
+| 10 | `MyDemoDataDrivenTests` | `[DATA]` | 9 | `@DataProvider` credential sets |
+| 11 | `MyDemoInstallTests` | `[INSTALL]` | 4 | Fresh install, upgrade, uninstall |
+| 12 | `MyDemoInterruptTests` | `[INTERRUPT]` | 5 | Incoming call, SMS, Wi-Fi toggle mid-session |
+| | **Total** | | **75** | |
 
 ---
 
-## Design Decisions
+## 🏗️ How It Fits Together
 
-### One Appium session per test class
-`@BeforeClass` / `@AfterClass` creates and destroys one driver session per class — significantly faster than spinning up a session per test method.
-
-### Fast app reset via ADB
-Instead of `fullReset` (slow APK reinstall), `MyDemoBaseTest` runs:
-```bash
-adb -s emulator-5554 shell pm clear com.saucelabs.mydemoapp.android
-```
-Same clean-state effect, much faster session startup.
-
-### Session health check in `@BeforeMethod`
-Every test class guards against a dead Appium session so cascade failures become clean skips:
-```java
-@BeforeMethod
-public void checkSession() {
-    try {
-        driver.getSessionId();
-        driver.findElements(By.id(PKG + ":id/menuIV")); // real Appium round-trip
-    } catch (Exception e) {
-        throw new SkipException("Session dead — skipping: " + e.getMessage());
-    }
-}
+```mermaid
+flowchart LR
+  S["testng-mydemo-all.xml<br/>12 test classes"] --> B["MyDemoBaseTest<br/>one session per class"]
+  B -->|local| AP["Appium 3<br/>127.0.0.1:4723"]
+  B -.->|optional| SL["Sauce Labs<br/>(env-var credentials)"]
+  AP --> EM["Android emulator<br/>My Demo App"]
+  S --> P["Page Objects<br/>Login · Products · Cart · Checkout"]
+  S --> L["ScreenshotListener<br/>ExtentReports · Allure"]
 ```
 
-### Navigation drawer — never press BACK
-On this app + emulator combination, pressing `navigate().back()` from an open navigation drawer exits the app to the Android home screen instead of closing the drawer. All drawer code closes by tapping the hamburger icon a second time.
+**Design decisions that made the suite stable**
 
-### Logout → `activateApp()` rescue
-After logout, the app navigates to the Android home screen. `LoginPage` automatically calls `driver.activateApp()` before any further navigation to bring the app back.
+- **One Appium session per test class** (`@BeforeClass` / `@AfterClass`) — far faster than a session per method
+- **Fast reset via ADB** — `pm clear com.saucelabs.mydemoapp.android` instead of a slow full reinstall
+- **Session health check** in `@BeforeMethod` — a dead session becomes a clean skip, not a cascade of failures
+- **Never press BACK from the navigation drawer** — on this app it exits to the home screen; the drawer is closed with the hamburger icon
+- **Logout rescue** — after logout the app goes to the home screen, so `LoginPage` calls `activateApp()` first
+- **No `currentActivity()`** — it shells out to `adb dumpsys` and can hang 20 s; health checks use `findElements()`
+- **Page dumps** — `CheckoutPage` and `ProductsPage` save the page source to `page-dumps/` when a screen is unexpected
 
-### Avoid `driver.currentActivity()`
-This method internally calls `adb dumpsys window displays`, which hangs 20+ seconds on a loaded emulator. Session health is checked using `driver.findElements()` instead — a real Appium round-trip with no ADB dependency.
+<details>
+<summary><strong>📈 Stabilisation history (local runs)</strong></summary>
 
----
+<br>
 
-## Test Reports & Screenshots
+| Run | Pass | Fail | Skip | Change |
+|---|---:|---:|---:|---|
+| 5 | 61 | 10 | 4 | Baseline |
+| 6 | 69 | 3 | 3 | Navigation-drawer BACK bug fixed |
+| 7 | 71 | 1 | 3 | Logout → home-screen rescue |
+| 11 | 75 | 0 | 1 | `terminateApp()` + `activateApp()` reset fixed two catalog-state races |
+| 13 | 75 | 0 | 0 | Rotation skip replaced with a stability assertion |
+| **CI** | **75** | **0** | **0** | **First run on GitHub Actions** |
 
-| Artifact | Location |
-|---|---|
-| HTML Report (ExtentReports) | `test-output/ExtentReport.html` |
-| HTML Report (Allure) | `target/site/allure-maven-plugin/index.html` (see [Allure Report](#-allure-report) below) |
-| Failure Screenshots | `test-output/screenshots/<testMethodName>.png` |
-
-Screenshots are captured automatically by `ScreenshotListener` on every test failure.
-
-`CheckoutPage` and `ProductsPage` also dump the raw page source to
-`page-dumps/<label>-dump.xml` for debugging locked/unexpected screens.
-
-> **Note:** four stale dump files with literal Windows-style names —
-> e.g. `` C:\Users\rezau\eclipse-workspace\appium-tests\payment-page-dump.xml `` —
-> exist in the project root from before this path was fixed (macOS treats `\`
-> as a normal filename character, not a path separator, so they landed there
-> instead of erroring). They're harmless and safe to delete manually; new runs
-> now write cleanly to `page-dumps/`.
+</details>
 
 ---
 
-## 📊 Allure Report
+## 🔄 CI/CD — GitHub Actions
 
-<p>
-  <a href="#-allure-report">
-    <img src="https://img.shields.io/badge/📊_Generate_%26_View-Allure_Report-FF6E00?style=for-the-badge" alt="Generate and View Allure Report" />
-  </a>
-</p>
+```mermaid
+flowchart LR
+  P["push / PR"] --> K["KVM · JDK 17 · Node 22"]
+  K --> A["Appium 3 + UiAutomator2"]
+  A --> D["Download My Demo App<br/>latest release APK"]
+  D --> E["Boot emulator API 33"]
+  E --> T["testng-mydemo-all.xml"]
+  T --> R["Artifacts: surefire · Allure ·<br/>ExtentReport · page dumps · Appium log"]
+```
 
-Test results are also collected as raw Allure results (`target/allure-results`) via the
-`allure-testng` listener, on top of the existing ExtentReports HTML report. Allure gives a
-richer, interactive report — timeline, categories, retries, and per-test steps/attachments.
+[`.github/workflows/tests.yml`](.github/workflows/tests.yml) also has a manual **Run workflow** button with a `suite` input, e.g. `testng-mydemo-local.xml` (the 9 E2E tests) or `testng.xml` (ApiDemos).
+
+---
+
+## 🚀 Getting Started (local)
+
+1. **Java 17**, **Maven 3**, **Node.js 20.19+**
+2. **Appium 3** with UiAutomator2:
+   ```bash
+   npm install -g appium@3
+   appium driver install uiautomator2
+   ```
+3. **Android emulator** running as `emulator-5554` (Android Studio → Device Manager)
+4. **APK** (optional — without it the already-installed app is launched): download `mda-*.apk` from [My Demo App releases](https://github.com/saucelabs/my-demo-app-android/releases) to `apks/MyDemoApp.apk`
 
 ```bash
-# 1. Run the tests (writes to target/allure-results)
-mvn clean test -DsuiteXmlFile=testng-mydemo-all.xml
+appium                                               # terminal 1
+adb devices                                          # emulator-5554 should be listed
 
-# 2a. Generate a static report and open it yourself
-mvn allure:report
-open target/site/allure-maven-plugin/index.html
-
-# 2b. Or generate + auto-open in one step (recommended — avoids the
-#     file:// CORS issue that leaves a static-opened report blank)
-mvn allure:serve
+mvn clean test                                       # MyDemo E2E suite (testng-mydemo-local.xml, default)
+mvn clean test -DsuiteXmlFile=testng-mydemo-all.xml  # all 75 tests
+./run-mydemo-all.sh                                  # same, with a log in test-output/
+mvn allure:serve                                     # Allure report
 ```
 
-> **Why `allure:serve` is recommended:** opening `index.html` directly via
-> `file://` triggers browser CORS restrictions and the report renders blank.
-> `allure:serve` spins up a local server and opens the report in your default
-> browser, which works reliably every time.
-
-Pinned to the Allure 2 (Java-based) report runtime — see the comment above the
-`allure-maven` plugin in `pom.xml` for why (a path-doubling bug in the default
-Allure 3/Node runtime's `serve` step).
-
----
-
-## Test Credentials (MyDemo App)
-
-| Field | Value |
+| Report | Location |
 |---|---|
-| Username | `bob@example.com` |
-| Password | `10203040` |
+| ExtentReports HTML | `test-output/ExtentReport.html` |
+| Allure | `target/allure-results/` → `mvn allure:serve` |
+| Failure screenshots | `test-output/screenshots/<test>.png` |
+| Page dumps | `page-dumps/<label>-dump.xml` |
 
----
+<details>
+<summary><strong>☁️ Sauce Labs (optional)</strong></summary>
 
-## Known Limitations
+<br>
 
-| Limitation | Detail |
-|---|---|
-| **App locks its own screen orientation** | `device_RotationDoesNotCrashApp` requests landscape both via `driver.rotate()`/adb `user_rotation`, but the OS never confirms it — the app's activity almost certainly declares `android:screenOrientation="portrait"` in its manifest, which overrides any system-level rotation request. This is expected app behavior, not a bug, so the test asserts what its name promises: the app stays stable/responsive around a rotation attempt, regardless of whether the OS honors it. |
-| **Emulator CPU load after interrupt tests** | Background/network-toggle simulations in `MyDemoInterruptTests` leave elevated CPU for ~30–60 seconds. Tests in subsequent classes may need slightly longer waits. |
-| **APK path** | Resolved as `<project-root>/apks/MyDemoApp.apk` (cross-platform). If absent, tests launch whatever's already installed via `noReset`. |
-| **"Continue Shopping" locator unverified** | `MyDemoE2ETests.returnToCatalogAfterOrder()` best-effort-taps a button matching text containing "Continue"; if that locator doesn't match this app build, it falls back to reactivating the app, which reliably reaches the catalog either way. |
-| **Suite rebuilt 2026-07-18/19** | The 12 MyDemo test classes were expanded from 27 real tests back to the documented 75, after several were found reduced to minimal stubs. Verified via live run at 75/75 passing, 0 skipped, 0 failed. |
-
----
-
-## SauceLabs Cloud (Optional)
-
-Suite files for SauceLabs are **excluded from Git** via `.gitignore` because they contain credentials:
-
-```
-testng-saucelabs.xml
-testng-saucelabs-crossdevice.xml
-testng-saucelabs-mydemo.xml
-```
-
-To run on SauceLabs, create your own copy based on `testng-mydemo-all.xml` and add your credentials as parameters. **Never commit credential files.**
-
-Credentials can also be passed as environment variables:
+`MyDemoBaseTest` and `BaseTest` can run on Sauce Labs real or virtual devices with `runMode=saucelabs`. Credentials are read from the environment — never commit them:
 
 ```bash
 export SAUCE_USERNAME=your-username
 export SAUCE_ACCESS_KEY=your-key
 ```
 
----
+</details>
 
-## Run History (MyDemo Suite)
+<details>
+<summary><strong>📱 ApiDemos suite (secondary)</strong></summary>
 
-| Run | Pass | Fail | Skip | Notes |
-|---|---|---|---|---|
-| Run 5 | 61 | 10 | 4 | Initial baseline |
-| Run 6 | 69 | 3 | 3 | Navigation drawer BACK bug fixed |
-| Run 7 | 71 | 1 | 3 | Logout → home screen rescue added |
-| Run 8 | 70 | 2 | 3 | Emulator flakiness regression |
-| Run 9 | 72 | 0 | 3 | ✅ Target achieved (pre-rebuild, 27-test version) |
-| Run 10 | 72 | 2 | 1 | Post-rebuild to 75 tests; 2 catalog-state races found |
-| Run 11 | 75 | 0 | 1 | `terminateApp()+activateApp()` reset fixed both races |
-| Run 12 | 75 | 0 | 1 | Rotation test still skipped after adb-based rotation attempt (app locks its own orientation) — skip path replaced with a stability assertion |
-| **Run 13** | **75** | **0** | **0** | **✅ Full target achieved — 100% pass, 0 skips** |
+<br>
 
----
-
-## Running the ApiDemos Suite
+The repository also contains the ApiDemos tests (`apks/ApiDemos-debug.apk`, `testng.xml`). The same suite is maintained and run in CI in **[AppiumTest_Andriod_Automation](https://github.com/rbchy/AppiumTest_Andriod_Automation)** (55 passed · 3 graceful skips · Cucumber 4 / 4). The Allure and Extent PDFs in this repository are from ApiDemos runs.
 
 ```bash
 mvn clean test -DsuiteXmlFile=testng.xml
 ```
 
-Targets the [ApiDemos](https://github.com/appium/android-apidemos) reference app. APK should be at `apks/ApiDemos-debug.apk` (optional — falls back to the already-installed app otherwise).
+</details>
 
 ---
-## 👨‍💻 Author
 
-**Ranajit B Chowdhury**
-**QA Automation Engineer & SDET
-📧 Cell Phone - 2673425565
-📧 chyranajit@gmail.com
+## 📁 Project Structure
 
-## License
+```
+AndroidUIAppiumTest_MyDemoEcommerce/
+├── .github/
+│   ├── workflows/tests.yml          ← APK download + emulator + Appium + suite
+│   └── scripts/run-appium-tests.sh
+├── apks/                            ← ApiDemos APK; MyDemoApp.apk downloaded (git-ignored)
+├── docs/tech-stack-diagram.svg
+├── page-dumps/                      ← page sources saved on unexpected screens
+├── src/test/java/
+│   ├── base/                        ← MyDemoBaseTest (MyDemo), BaseTest (ApiDemos)
+│   ├── pages/mydemo/                ← LoginPage, ProductsPage, CartPage, CheckoutPage
+│   ├── pages/                       ← ApiDemos pages
+│   ├── tests/                       ← 12 MyDemo* classes + ApiDemos classes
+│   ├── listeners/ScreenshotListener.java
+│   └── utils/                       ← ExtentReportManager, WaitUtils
+├── testng-mydemo-all.xml            ← all 12 MyDemo categories (75 tests)
+├── testng-mydemo-local.xml          ← MyDemo E2E (9 tests) — Maven default
+├── testng.xml                       ← ApiDemos
+├── run-mydemo-all.sh · run-mydemo-local.sh
+└── pom.xml
+```
 
-This project is for personal learning and portfolio purposes.  
-The SauceLabs My Demo App is owned by [Sauce Labs, Inc](https://saucelabs.com/).
+---
+
+## 🧹 Maintenance Log
+
+| Change | Why |
+|---|---|
+| Added `pom.xml` | The README and run scripts used it, but it was not in the repository — nothing could build |
+| Added `testng-mydemo-all.xml`, `testng-mydemo-local.xml`, `testng.xml` | Referenced everywhere but missing; restored from the companion repository and Windows paths removed |
+| GitHub Actions on an Android emulator, APK from Sauce Labs' release | First committed, reproducible proof of 75 / 75 |
+| `apks/MyDemoApp.apk` git-ignored | Downloaded per run instead of stored |
+| README: no `.bat` files or git-ignored Sauce suite files listed | They are not in the repository |
+
+**Known limitations:** the app locks its own orientation, so the rotation test asserts stability instead of landscape layout; interrupt simulations (`adb emu`) work only on emulators; the "Continue Shopping" button is tapped best-effort with a fallback.
+
+---
+
+## 🔗 Related Projects
+
+| Project | Stack |
+|---|---|
+| 📱 [Appium Android Automation — ApiDemos](https://github.com/rbchy/AppiumTest_Andriod_Automation) | Appium 3 · TestNG · Cucumber — CI green on an emulator |
+| ⭐ [RbcTcsWorld E-Commerce Suite](https://github.com/rbchy/RbcTcsWorld_ECommerceSuite) | Spring Boot · Playwright · Appium 3 on Android and iOS · CI quality gates |
+| ☁️ [Sauce Labs Cloud Automation](https://github.com/rbchy/QaBrainsSauceLabAPI_Automation) | Selenium · Cucumber · Sauce Labs browser matrix |
+| 🛍️ [Sauce Demo Shop Automation](https://github.com/rbchy/Sauce-Demo.MyShopify.AutomationTest) | Selenium · Cucumber — CI green |
+
+<sub>All projects: [github.com/rbchy](https://github.com/rbchy)</sub>
+
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Ranajit Baran Chowdhury (RB Chowdhury)**
+QA Automation Engineer / SDET · West Norriton, Pennsylvania, USA
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rbchy/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rbchy)
+[![Website](https://img.shields.io/badge/Website-rbchy.github.io%2Frbchy-0d9488?style=for-the-badge&logo=githubpages&logoColor=white)](https://rbchy.github.io/rbchy/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-blueviolet?style=for-the-badge&logo=wix&logoColor=white)](https://rbc6543.wixsite.com/rbc-portfolio)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:chyranajit@gmail.com)
+
+<sub>A personal learning and portfolio project. The My Demo App is owned by <a href="https://saucelabs.com/">Sauce Labs, Inc.</a></sub>
+
+⭐ *If this framework helps you, a star on the repo is appreciated.*
+
+</div>
